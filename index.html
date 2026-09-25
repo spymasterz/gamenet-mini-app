@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>حساب قیمت گیم‌نت</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script
+src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<script src="script.js"></script>
+
+<body>
+
+<div class="container">
+
+    <h1>🎮 حساب قیمت گیم‌نت</h1>
+
+    <p class="subtitle">
+        زمان بازی را وارد کن تا مبلغ دقیق محاسبه شود
+    </p>
+
+    <label>قیمت هر ساعت (تومان)</label>
+
+    <input
+        id="hourPrice"
+        type="number"
+        inputmode="numeric"
+        placeholder="مثلاً 100000"
+    >
+
+
+    <label>ساعت شروع</label>
+
+    <div class="time-row">
+
+        <input
+            id="start"
+            type="time"
+        >
+
+        <button
+            class="now"
+            onclick="setNow('start')"
+        >
+            الان
+        </button>
+
+    </div>
+
+
+    <label>ساعت پایان</label>
+
+    <div class="time-row">
+
+        <input
+            id="end"
+            type="time"
+        >
+
+        <button
+            class="now"
+            onclick="setNow('end')"
+        >
+            الان
+        </button>
+
+    </div>
+
+
+    <button
+        class="calculate"
+        onclick="calculate()"
+    >
+        🧮 محاسبه قیمت
+    </button>
+
+
+    <button
+        class="clear"
+        onclick="clearAll()"
+    >
+        🗑 پاک کردن
+    </button>
+
+
+    <div class="result">
+
+        <div class="result-title">
+            مبلغ قابل پرداخت
+        </div>
+
+        <div
+            id="price"
+            class="price"
+        >
+            ۰ تومان
+        </div>
+
+        <div
+            id="duration"
+            class="duration"
+        >
+            مدت بازی: —
+        </div>
+
+        <div
+            id="minutePrice"
+            class="minute-price"
+        >
+            قیمت هر دقیقه: —
+        </div>
+
+    </div>
+
+
+    <div
+        id="error"
+        class="error"
+    ></div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
